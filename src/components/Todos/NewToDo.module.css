@@ -1,14 +1,15 @@
-form{
-    background-color: rgb(107, 88, 88);
-    width: 35%;
+.taskInput{
+    background-color: #60BF81;
+    color: white;
+    width: 55%;
     margin: 10rem auto 0;
     border-radius: 10px;
     box-shadow: 8px 8px 17px -7px rgba(66, 68, 90, 1);
 }
 
-form div label{
+.taskInput div label{
     display: block;
-    font-size: 20px;
+    font-size: 26px;
     margin: 1.5rem 0 0 .5rem;
 }
 
@@ -35,7 +36,7 @@ form div label{
     font-size: 20px;
     margin: 2rem 0 .5rem;
     padding: 10px 40px;
-    background-color: rgb(45, 80, 138);
+    background-color: #93D94E;
     border:none;
     position: relative;
     left: 50%;

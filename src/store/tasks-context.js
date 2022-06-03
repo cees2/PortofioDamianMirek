@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 const TaskContext = createContext({
-  //{id: 1, task: 'sss', priority: 'Low'}
+  //{id: 1, task: 'sss', priority: 'Low', userId: 'dsadsadsadsa'}
   tasks: [],
   setTasks: (tasks) => {},
   addTask: (task) => {},
@@ -26,15 +26,15 @@ export const TaskContextProvider = (props) => {
     );
   };
 
-  const removeTask = (id) => {
+  const removeTask = (taskId, id) => {
     fetch(
-      "https://react-http-d03fd-default-rtdb.europe-west1.firebasedatabase.app/tasksToDo.json",
+      `https://react-http-d03fd-default-rtdb.europe-west1.firebasedatabase.app/tasksToDo/${taskId}.json`,
       {
         method: "DELETE",
-        body: JSON.stringify(id),
       }
     );
-    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+
+    setTasksToDo((prevTasks) => prevTasks.filter((task) => task.id !== id));
   };
 
   const setTasks = (tasks) => {
